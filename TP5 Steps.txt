@@ -1,0 +1,15 @@
+Desarrollo TP5
+
+1- Compilamos y cargamos en el núcleo del kernel con el insmod el source code del módulo de kernel drv1.c
+2- Elminamos el módulo con el rmmod y visualizamos los mensajes
+3- Compilamos y cargamos en el núcleo del kernel con el insmod el source code del módulo de kernel drv2.c
+4- Calcula <major-minor>
+5- Creamos dos dispositivos con minor 0 y minor 1 en el major 236
+6- Intentamos read/write esos CDF con cat /dev/drv2_0 echo “Hola driver..” > /dev/drv2_0
+Aparece un mensaje de error. 
+7- Comunicamos con los driver de los dispositivos 
+8- Cargamos drv3 con insmod
+9- Observamos las funciones read write 
+10- Cargamos con insmod drv4
+11- Observamos las mejoras en las funciones read y write del drv4. Guarda en buffer el último caracter
+12- Raspberry + ESP32
