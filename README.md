@@ -12,13 +12,6 @@
    - Britez, Fabio
    - Gonzalez, Bruno
 
-
----------------
-
-  <p align="center">
-
-
-
 -------------
 </p>
 
@@ -35,6 +28,11 @@ Un device controller es un componente de hardware que se encarga de gestionar y 
 Un bus driver es un software que controla la comunicación a través de un bus de hardware, facilitando la comunicación con dispostivos conectados.
 
 Finalmente, el device driver permite la gestión de este sistema a través del sistema operativo, facilitando el control de un dispositivo especiífico
+
+<p align="center">
+  <img src="images/1 - Drivers system.png" alt="drv">
+</p>
+
 
 <img src="images/1 - Drivers system.png" alt="img">
 
