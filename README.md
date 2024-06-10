@@ -34,8 +34,6 @@ Finalmente, el device driver permite la gestión de este sistema a través del s
 </p>
 
 
-<img src="Images/1 - Drivers system.png" alt="img">
-
 ### Clasificación de un driver en linux
 
 En Linux un “driver” se clasifica en general en tres verticales:
