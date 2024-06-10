@@ -30,11 +30,11 @@ Un bus driver es un software que controla la comunicación a través de un bus d
 Finalmente, el device driver permite la gestión de este sistema a través del sistema operativo, facilitando el control de un dispositivo especiífico
 
 <p align="center">
-  <img src="images/1 - Drivers system.png" alt="drv">
+  <img src="Images/1 - Drivers system.png" alt="drv">
 </p>
 
 
-<img src="images/1 - Drivers system.png" alt="img">
+<img src="Images/1 - Drivers system.png" alt="img">
 
 ### Clasificación de un driver en linux
 
@@ -65,7 +65,7 @@ Para descargar el módulo del núcleo del kernel llamamos a su destructor a trav
 
 Podemos evidenciar la carga y descarga del CDD gracias a sus funciones module_init() y module_exit():
 
-<img src="images/2-drv1.jpg" alt="drv1">
+<img src="Images/2-drv1.jpg" alt="drv1">
 
 ## Conexión entre CDF y CDD
 
@@ -73,7 +73,7 @@ Para conectar CDF con sus correspondientes CDD se utilizan los índices "major" 
 
 Cargamos el módulo "drv2" cuyo meyor designado es 236 e instanciamos dos dispositivos menor 1 y 2.
 
-<img src="images/3-drv2.jpg" alt="drv2">
+<img src="Images/3-drv2.jpg" alt="drv2">
 
 
 ## Revisión de dispositivos en /sys
@@ -81,7 +81,7 @@ El directorio /sys proporciona una vista jerárquica de varios aspectos del sist
 
 En este caso, observamos información relacionada con la CPU.
 
-<img src="images/4-sys.jpg" alt="sys">
+<img src="Images/4-sys.jpg" alt="sys">
 
 ## Operaciones del CDF
 
@@ -115,7 +115,7 @@ return len;
 
 Interactuando con el CDF del drv3:
 
-<img src="images/5-drv3.jpg" alt="drv3">
+<img src="Images/5-drv3.jpg" alt="drv3">
 
 No obtenemos ninguna salida, el valor de retorno de las funciones my_open() y my_close() son triviales. Pero no así read() y write() que devuelven ssize_t. 
 
