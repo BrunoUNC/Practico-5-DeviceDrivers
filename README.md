@@ -69,7 +69,7 @@ Podemos evidenciar la carga y descarga del CDD gracias a sus funciones module_in
 
 Para conectar CDF con sus correspondientes CDD se utilizan los índices "major" y "minor". El número "major" identifica el controlador de dispositivo (Character Device Driver o CDD) responsable de manejar las solicitudes de I/O para ese tipo de dispositivo. El número "minor" identifica un dispositivo específico gestionado por ese controlador.
 
-Cargamos el módulo "drv2" cuyo meyor designado es 236 e instanciamos dos dispositivos menor 1 y 2.
+Cargamos el módulo "drv2" cuyo major designado es 236 e instanciamos dos dispositivos menor 1 y 2.
 
 <img src="Images/3-drv2.jpg" alt="drv2">
 
