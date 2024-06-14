@@ -234,6 +234,107 @@ Estas variables son esenciales para la configuración y operación del controlad
 **RESUMEN**: *El código proporciona un controlador de señal de entrada GPIO que permite detectar el estado de dos señales externas conectadas a pines GPIO en una Raspberry Pi y seleccionar cuál de las dos señales leer*.
 
 
+-----
+
+
+ Además, se encuentra disponible el código `visualize_signal.py`, que permite obtener los gráficos de las señales generadas.
+
+
+### `visualize_signal.py`
+
+
+
+
+
+
+### Variables Globales
+
+
+- `pin_actual = 1`  
+  Almacena el número de pin GPIO actualmente seleccionado. Se inicializa en 1.
+
+
+- `x_data = []`  
+  Lista que almacena los tiempos de lectura de los datos del pin GPIO para el gráfico.
+
+
+- `y_data = []`  
+  Lista que almacena los valores leídos del pin GPIO para el gráfico.
+
+
+- `start_time = time.time()`  
+  Tiempo de inicio para calcular el tiempo transcurrido desde que se inició la lectura de los datos.
+
+
+### Funciones Principales
+
+
+- `select_pin(pin_number):`  
+  Selecciona el pin GPIO a leer escribiendo el número de pin en el archivo `/dev/signal_input`. Si el número de pin no es 1 o 2, se levanta una excepción `ValueError`.
+
+
+- `leer_gpio():`  
+  Lee el valor del pin GPIO seleccionado desde el archivo `/dev/signal_input` y lo devuelve como un número de punto flotante. Si el archivo no existe, imprime un mensaje de error y devuelve `None`.
+
+
+- `graficar():`  
+  Crea un gráfico en tiempo real de los valores leídos del pin GPIO seleccionado. Utiliza `matplotlib` para dibujar el gráfico y actualiza continuamente los datos leídos.
+
+
+- `cambiar_pin():`  
+  Permite al usuario cambiar el pin GPIO que se está leyendo. Pide al usuario que ingrese un número de pin (1 o 2) y llama a `select_pin` para seleccionar el nuevo pin. También limpia los datos y reinicia el gráfico.
+
+
+### Ejecución del Programa
+
+
+- El programa comienza seleccionando inicialmente el pin 1 con `select_pin(pin_actual)`.
+
+
+- Se crean dos hilos (`grafico_thread` y `pin_thread`) para ejecutar las funciones `graficar` y `cambiar_pin` respectivamente en paralelo con el hilo principal.
+
+
+- Ambos hilos se inician con `grafico_thread.start()` y `pin_thread.start()`.
+
+
+- El programa principal espera a que ambos hilos terminen con `grafico_thread.join()` y `pin_thread.join()`.
+
+
+**RESUMEN**: *Este código crea un programa que lee datos de un pin GPIO seleccionado, permite al usuario cambiar el pin en tiempo real y muestra un gráfico en tiempo real de los valores leídos del pin seleccionado*.
+
+
+
+
+------
+
+
+### Resultados Obtenidos
+
+
+**NOTA: Las señales son triangulares debido a problemas de retraso en la lectura del controlador.**
+
+
+<img src="Images/11-Pin1Gra.png" alt="PIN1">
+
+
+<img src="Images/12-ConsolaToggle.png" alt="CONSOL1">
+
+
+<img src="Images/13-Pin2Gra.png" alt="PIN2">
+
+
+<img src="Images/14-SignalInputConsole.png" alt="CONSOL2">
+
+
+
+
+
+
+
+
+
+
+
 
 
 
